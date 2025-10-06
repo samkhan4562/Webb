@@ -83,26 +83,344 @@
         .status-step.completed::before {
             background: #10b981;
         }
+        
+        /* Responsive Design */
+        
+        /* Mobile Screens (360×800, 390×844, 393×873, 412×915) */
+        @media (max-width: 480px) {
+            .container {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            
+            /* Header adjustments */
+            header .container {
+                padding: 8px 12px;
+            }
+            
+            header img {
+                height: 32px;
+            }
+            
+            /* Banner adjustments */
+            .banner-section img {
+                height: 200px;
+            }
+            
+            .shop-now-btn {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+            
+            /* Product grid - 2 columns on mobile */
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .product-card img {
+                height: 120px;
+            }
+            
+            .product-card .p-4 {
+                padding: 12px;
+            }
+            
+            .product-card h3 {
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+            
+            .product-card p {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+            
+            .product-card .text-xl {
+                font-size: 16px;
+            }
+            
+            /* Modal adjustments */
+            .product-modal {
+                margin: 8px;
+                max-height: calc(100vh - 16px);
+            }
+            
+            .product-modal img {
+                height: 200px;
+            }
+            
+            .product-modal .p-6 {
+                padding: 16px;
+            }
+            
+            /* Cart modal */
+            .cart-modal {
+                width: 100%;
+                max-width: none;
+            }
+            
+            /* Menu panel */
+            .menu-panel {
+                width: 280px;
+            }
+            
+            /* Forms */
+            .form-container {
+                max-width: none;
+                margin: 0 12px;
+            }
+            
+            .form-input {
+                padding: 12px;
+                font-size: 16px;
+            }
+            
+            /* Order status */
+            .order-status {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .order-status::before {
+                display: none;
+            }
+            
+            .status-step {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .status-step p {
+                margin: 0;
+            }
+        }
+        
+        /* Small Mobile (360×800) */
+        @media (max-width: 360px) {
+            .container {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            
+            .shop-now-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .products-grid {
+                gap: 8px;
+            }
+            
+            .product-card .p-4 {
+                padding: 8px;
+            }
+        }
+        
+        /* Tablet Portrait (768×1024, 820×1180) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            
+            /* Header */
+            header img {
+                height: 40px;
+            }
+            
+            /* Banner */
+            .banner-section img {
+                height: 300px;
+            }
+            
+            .shop-now-btn {
+                padding: 16px 32px;
+                font-size: 18px;
+            }
+            
+            /* Product grid - 3 columns on tablet */
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+            
+            .product-card img {
+                height: 160px;
+            }
+            
+            /* Modal adjustments */
+            .product-modal {
+                max-width: 500px;
+            }
+            
+            .cart-modal {
+                width: 400px;
+            }
+            
+            .menu-panel {
+                width: 320px;
+            }
+            
+            /* Forms */
+            .form-container {
+                max-width: 400px;
+            }
+        }
+        
+        /* Tablet Landscape (1280×800, 800×1280) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            /* Banner */
+            .banner-section img {
+                height: 320px;
+            }
+            
+            /* Product grid - 4 columns on tablet landscape */
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            
+            .product-card img {
+                height: 180px;
+            }
+            
+            /* Modal adjustments */
+            .product-modal {
+                max-width: 600px;
+            }
+            
+            .cart-modal {
+                width: 450px;
+            }
+            
+            .menu-panel {
+                width: 350px;
+            }
+            
+            /* Forms */
+            .form-container {
+                max-width: 500px;
+            }
+        }
+        
+        /* Small Desktop (1280×720, 1366×768) */
+        @media (min-width: 1025px) and (max-width: 1366px) {
+            .container {
+                max-width: 1200px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            /* Banner */
+            .banner-section img {
+                height: 350px;
+            }
+            
+            /* Product grid - 4-5 columns */
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+            }
+            
+            .product-card img {
+                height: 200px;
+            }
+        }
+        
+        /* Large Desktop (1536×864, 1920×1080) */
+        @media (min-width: 1367px) {
+            .container {
+                max-width: 1400px;
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+            
+            /* Banner */
+            .banner-section img {
+                height: 400px;
+            }
+            
+            /* Product grid - 5-6 columns */
+            .products-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 28px;
+            }
+            
+            .product-card img {
+                height: 220px;
+            }
+        }
+        
+        /* Ultra Wide Desktop (1920×1080+) */
+        @media (min-width: 1921px) {
+            .container {
+                max-width: 1600px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 32px;
+            }
+        }
+        
+        /* Responsive Typography */
+        @media (max-width: 480px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 18px; }
+            .text-3xl { font-size: 24px; }
+            .text-2xl { font-size: 20px; }
+            .text-xl { font-size: 18px; }
+            .text-lg { font-size: 16px; }
+        }
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            h1 { font-size: 28px; }
+            h2 { font-size: 24px; }
+            h3 { font-size: 20px; }
+            .text-3xl { font-size: 28px; }
+            .text-2xl { font-size: 24px; }
+        }
+        
+        /* Responsive Spacing */
+        @media (max-width: 480px) {
+            .py-8 { padding-top: 16px; padding-bottom: 16px; }
+            .py-6 { padding-top: 12px; padding-bottom: 12px; }
+            .py-4 { padding-top: 8px; padding-bottom: 8px; }
+            .px-8 { padding-left: 16px; padding-right: 16px; }
+            .px-6 { padding-left: 12px; padding-right: 12px; }
+            .px-4 { padding-left: 8px; padding-right: 8px; }
+            .mb-8 { margin-bottom: 16px; }
+            .mb-6 { margin-bottom: 12px; }
+            .mb-4 { margin-bottom: 8px; }
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="samkhan4562/Webb/logo.png" alt="Logo" class="h-10 w-auto" onerror="this.src=''; this.innerHTML='<div class=\'w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold\'>P</div>';">
+                <img src="logo.png" alt="Logo" class="h-8 sm:h-10 lg:h-12 w-auto" onerror="this.src=''; this.innerHTML='<div class=\'w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base lg:text-lg\'>P</div>';">
             </div>
             
-            <div class="flex items-center space-x-4">
-                <button onclick="toggleCart()" class="relative p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <button onclick="toggleCart()" class="relative p-1.5 sm:p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h12.6M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"></path>
                     </svg>
-                    <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-xs">0</span>
                 </button>
                 
-                <button onclick="toggleMenu()" class="p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button onclick="toggleMenu()" class="p-1.5 sm:p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -112,22 +430,22 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="fixed right-0 top-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300" id="menuPanel">
-            <div class="p-4 border-b">
-                <button onclick="toggleMenu()" class="float-right">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="fixed right-0 top-0 h-full w-72 sm:w-80 lg:w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-300" id="menuPanel">
+            <div class="p-3 sm:p-4 border-b">
+                <button onclick="toggleMenu()" class="float-right p-1 hover:bg-gray-100 rounded">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
-                <h3 class="text-lg font-semibold oswald">Menu</h3>
+                <h3 class="text-base sm:text-lg font-semibold oswald">Menu</h3>
             </div>
-            <div class="p-4 space-y-4">
-                <button onclick="showProfile()" class="block w-full text-left p-3 hover:bg-gray-100 rounded">Profile</button>
-                <button onclick="showMyOrders()" class="block w-full text-left p-3 hover:bg-gray-100 rounded">My Orders</button>
-                <button onclick="showWishlist()" class="block w-full text-left p-3 hover:bg-gray-100 rounded">Wishlist</button>
-                <button onclick="showContact()" class="block w-full text-left p-3 hover:bg-gray-100 rounded">Contact Us</button>
+            <div class="p-3 sm:p-4 space-y-2 sm:space-y-4">
+                <button onclick="showProfile()" class="block w-full text-left p-2 sm:p-3 hover:bg-gray-100 rounded text-sm sm:text-base transition-colors">Profile</button>
+                <button onclick="showMyOrders()" class="block w-full text-left p-2 sm:p-3 hover:bg-gray-100 rounded text-sm sm:text-base transition-colors">My Orders</button>
+                <button onclick="showWishlist()" class="block w-full text-left p-2 sm:p-3 hover:bg-gray-100 rounded text-sm sm:text-base transition-colors">Wishlist</button>
+                <button onclick="showContact()" class="block w-full text-left p-2 sm:p-3 hover:bg-gray-100 rounded text-sm sm:text-base transition-colors">Contact Us</button>
                 <div id="authButton">
-                    <button onclick="showSignup()" class="block w-full text-left p-3 hover:bg-gray-100 rounded text-green-600">Sign Up</button>
+                    <button onclick="showSignup()" class="block w-full text-left p-2 sm:p-3 hover:bg-gray-100 rounded text-green-600 text-sm sm:text-base transition-colors">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -136,19 +454,19 @@
     <!-- Main Content -->
     <main id="mainContent">
         <!-- Banner Section -->
-        <section class="relative">
-            <img src="samkhan4562/Webb/banner.jpg" alt="Banner" class="w-full h-64 md:h-96 object-cover" onerror="this.src=''; this.style.background='linear-gradient(135deg, #99d0bd, #7fb3a3)'; this.style.height='24rem';">
-            <div class="absolute inset-0 flex items-end justify-center pb-8">
-                <button onclick="scrollToProducts()" class="shop-now-btn bg-[#99d0bd] hover:bg-[#7fb3a3] text-white px-8 py-3 rounded-full font-semibold oswald text-lg transition-all duration-300 hover:scale-105">
+        <section class="relative banner-section">
+            <img src="banner.jpg" alt="Banner" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[28rem] object-cover" onerror="this.src=''; this.style.background='linear-gradient(135deg, #99d0bd, #7fb3a3)'; this.style.height='12rem'; this.classList.add('sm:h-64', 'md:h-80', 'lg:h-96', 'xl:h-[28rem]');">
+            <div class="absolute inset-0 flex items-end justify-center pb-4 sm:pb-6 md:pb-8">
+                <button onclick="scrollToProducts()" class="shop-now-btn bg-[#99d0bd] hover:bg-[#7fb3a3] text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 rounded-full font-semibold oswald text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105">
                     Shop Now
                 </button>
             </div>
         </section>
 
         <!-- Products Section -->
-        <section id="productsSection" class="container mx-auto px-4 py-8">
-            <h2 class="text-3xl font-bold text-center mb-8 oswald">Our Perfumes</h2>
-            <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        <section id="productsSection" class="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6 md:mb-8 oswald">Our Perfumes</h2>
+            <div id="productsGrid" class="products-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
                 <!-- Products will be loaded here -->
             </div>
         </section>
@@ -156,23 +474,23 @@
 
     <!-- Cart Modal -->
     <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-lg">
-            <div class="p-4 border-b flex justify-between items-center">
-                <h3 class="text-lg font-semibold oswald">Shopping Cart</h3>
-                <button onclick="toggleCart()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="cart-modal fixed right-0 top-0 h-full w-full sm:w-96 md:w-[28rem] lg:w-[32rem] max-w-full bg-white shadow-lg">
+            <div class="p-3 sm:p-4 border-b flex justify-between items-center">
+                <h3 class="text-base sm:text-lg font-semibold oswald">Shopping Cart</h3>
+                <button onclick="toggleCart()" class="p-1 hover:bg-gray-100 rounded">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
-            <div id="cartItems" class="p-4 flex-1 overflow-y-auto max-h-96">
+            <div id="cartItems" class="p-3 sm:p-4 flex-1 overflow-y-auto" style="max-height: calc(100vh - 200px);">
                 <!-- Cart items will be displayed here -->
             </div>
-            <div class="p-4 border-t">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="font-semibold">Total: ₹<span id="cartTotal">0</span></span>
+            <div class="p-3 sm:p-4 border-t bg-white">
+                <div class="flex justify-between items-center mb-3 sm:mb-4">
+                    <span class="font-semibold text-sm sm:text-base">Total: ₹<span id="cartTotal">0</span></span>
                 </div>
-                <button onclick="proceedToCheckout()" class="w-full bg-[#99d0bd] hover:bg-[#7fb3a3] text-white py-3 rounded-lg font-semibold oswald">
+                <button onclick="proceedToCheckout()" class="w-full bg-[#99d0bd] hover:bg-[#7fb3a3] text-white py-2.5 sm:py-3 rounded-lg font-semibold oswald text-sm sm:text-base transition-colors">
                     Checkout
                 </button>
             </div>
@@ -180,11 +498,11 @@
     </div>
 
     <!-- Product Modal -->
-    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-        <div class="product-modal bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-2 sm:p-4">
+        <div class="product-modal bg-white rounded-lg max-w-sm sm:max-w-md md:max-w-lg w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
             <div class="relative">
-                <button onclick="closeProductModal()" class="absolute top-4 right-4 z-10 bg-white rounded-full p-2 shadow-md">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button onclick="closeProductModal()" class="absolute top-2 sm:top-4 right-2 sm:right-4 z-10 bg-white rounded-full p-1.5 sm:p-2 shadow-md hover:bg-gray-100 transition-colors">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
@@ -228,61 +546,267 @@
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5dWF1bGdmZ3ljb3dqY2NjaXpvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkzMjQ1MDMsImV4cCI6MjA3NDkwMDUwM30.IfgrCv-4oJQpQgz5g8s8a-o8USK8gto0MDinW7BSExc';
         const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+        /*
+        📋 SUPABASE DATABASE SETUP INSTRUCTIONS:
+        
+        To enable full database functionality, create these tables in your Supabase dashboard:
+
+        1. PRODUCTS TABLE:
+        CREATE TABLE products (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            price INTEGER NOT NULL,
+            image TEXT,
+            description TEXT,
+            created_at TIMESTAMP DEFAULT NOW()
+        );
+
+        2. CART TABLE:
+        CREATE TABLE cart (
+            id SERIAL PRIMARY KEY,
+            user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+            product_id INTEGER REFERENCES products(id) ON DELETE CASCADE,
+            quantity INTEGER DEFAULT 1,
+            created_at TIMESTAMP DEFAULT NOW()
+        );
+
+        3. WISHLIST TABLE:
+        CREATE TABLE wishlist (
+            id SERIAL PRIMARY KEY,
+            user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+            product_id INTEGER REFERENCES products(id) ON DELETE CASCADE,
+            created_at TIMESTAMP DEFAULT NOW()
+        );
+
+        4. ORDERS TABLE:
+        CREATE TABLE orders (
+            id SERIAL PRIMARY KEY,
+            order_id VARCHAR(255) UNIQUE NOT NULL,
+            user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+            items JSONB NOT NULL,
+            total INTEGER NOT NULL,
+            address JSONB NOT NULL,
+            status VARCHAR(50) DEFAULT 'confirmed',
+            created_at TIMESTAMP DEFAULT NOW()
+        );
+
+        5. ENABLE ROW LEVEL SECURITY (RLS):
+        ALTER TABLE cart ENABLE ROW LEVEL SECURITY;
+        ALTER TABLE wishlist ENABLE ROW LEVEL SECURITY;
+        ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
+
+        6. CREATE RLS POLICIES:
+        CREATE POLICY "Users can manage their own cart" ON cart FOR ALL USING (auth.uid() = user_id);
+        CREATE POLICY "Users can manage their own wishlist" ON wishlist FOR ALL USING (auth.uid() = user_id);
+        CREATE POLICY "Users can manage their own orders" ON orders FOR ALL USING (auth.uid() = user_id);
+        CREATE POLICY "Products are viewable by everyone" ON products FOR SELECT USING (true);
+
+        ⚠️ NOTE: If tables don't exist, the app will work with localStorage fallback.
+        */
+
         // Global Variables
         let currentUser = null;
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        let products = [
-            {
-                id: 1,
-                name: "Rose Elegance",
-                price: 2500,
-                image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=300",
-                description: "A luxurious rose fragrance with hints of vanilla and musk. Perfect for evening wear."
-            },
-            {
-                id: 2,
-                name: "Ocean Breeze",
-                price: 2200,
-                image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?w=300",
-                description: "Fresh aquatic scent with marine notes. Ideal for daily wear and summer days."
-            },
-            {
-                id: 3,
-                name: "Midnight Mystery",
-                price: 3000,
-                image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=300",
-                description: "Deep, mysterious fragrance with woody and amber notes. Perfect for special occasions."
-            },
-            {
-                id: 4,
-                name: "Citrus Burst",
-                price: 1800,
-                image: "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=300",
-                description: "Energizing citrus blend with lemon, orange, and bergamot. Great for morning freshness."
-            },
-            {
-                id: 5,
-                name: "Lavender Dreams",
-                price: 2100,
-                image: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300",
-                description: "Calming lavender scent with floral undertones. Perfect for relaxation and sleep."
-            },
-            {
-                id: 6,
-                name: "Spice Garden",
-                price: 2800,
-                image: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=300",
-                description: "Exotic spice blend with cardamom, cinnamon, and black pepper. Bold and captivating."
-            }
-        ];
+        let cart = [];
+        let wishlist = [];
+        let products = [];
+        let databaseStatus = {
+            products: false,
+            cart: false,
+            wishlist: false,
+            orders: false
+        };
 
         // Initialize App
-        document.addEventListener('DOMContentLoaded', function() {
-            checkAuthStatus();
-            loadProducts();
+        document.addEventListener('DOMContentLoaded', async function() {
+            await checkAuthStatus();
+            await initializeData();
+            await loadProducts();
+            await loadUserData();
             updateCartUI();
         });
+
+        // Initialize Database Data
+        async function initializeData() {
+            console.log('🔄 Initializing database data...');
+            
+            // Check which tables are available
+            const tableStatus = await checkDatabaseTables();
+            
+            // Always try to load products from Supabase first
+            if (databaseStatus.products) {
+                try {
+                    const { data: dbProducts, error } = await supabase
+                        .from('products')
+                        .select('*')
+                        .order('id', { ascending: true });
+
+                    if (!error && dbProducts && dbProducts.length > 0) {
+                        products = dbProducts;
+                        console.log('✅ Products loaded from database:', products.length, 'items');
+                        return;
+                    } else {
+                        console.log('⚠️ No products found in database, will use fallback');
+                    }
+                } catch (error) {
+                    console.log('⚠️ Error loading products from database:', error.message);
+                }
+            }
+            
+            // Fallback products only if database is empty or unavailable
+            products = [
+                {
+                    id: 1,
+                    name: "Rose Elegance",
+                    price: 2500,
+                    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=300",
+                    description: "A luxurious rose fragrance with hints of vanilla and musk. Perfect for evening wear."
+                },
+                {
+                    id: 2,
+                    name: "Ocean Breeze",
+                    price: 2200,
+                    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?w=300",
+                    description: "Fresh aquatic scent with marine notes. Ideal for daily wear and summer days."
+                }
+            ];
+            
+            console.log('💾 Using fallback products:', products.length, 'items');
+        }
+
+        // Check Database Tables Availability
+        async function checkDatabaseTables() {
+            console.log('🔍 Checking database table availability...');
+            
+            const tableStatus = {
+                products: false,
+                cart: false,
+                wishlist: false,
+                orders: false
+            };
+            
+            try {
+                // Check if products table exists
+                const { data: productsData, error: productsError } = await supabase
+                    .from('products')
+                    .select('id')
+                    .limit(1);
+                
+                if (!productsError) {
+                    tableStatus.products = true;
+                    console.log('✅ Products table available');
+                } else {
+                    console.log('⚠️ Products table not available:', productsError.message);
+                }
+
+                // Check if cart table exists
+                const { data: cartData, error: cartError } = await supabase
+                    .from('cart')
+                    .select('id')
+                    .limit(1);
+                
+                if (!cartError) {
+                    tableStatus.cart = true;
+                    console.log('✅ Cart table available');
+                } else {
+                    console.log('⚠️ Cart table not available:', cartError.message);
+                }
+
+                // Check if wishlist table exists
+                const { data: wishlistData, error: wishlistError } = await supabase
+                    .from('wishlist')
+                    .select('id')
+                    .limit(1);
+                
+                if (!wishlistError) {
+                    tableStatus.wishlist = true;
+                    console.log('✅ Wishlist table available');
+                } else {
+                    console.log('⚠️ Wishlist table not available:', wishlistError.message);
+                }
+
+                // Check if orders table exists
+                const { data: ordersData, error: ordersError } = await supabase
+                    .from('orders')
+                    .select('id')
+                    .limit(1);
+                
+                if (!ordersError) {
+                    tableStatus.orders = true;
+                    console.log('✅ Orders table available');
+                } else {
+                    console.log('⚠️ Orders table not available:', ordersError.message);
+                }
+
+            } catch (error) {
+                console.log('⚠️ Database connection issue, using localStorage fallback');
+            }
+            
+            console.log('📊 Database status:', tableStatus);
+            databaseStatus = tableStatus;
+            return tableStatus;
+        }
+
+        // Load User Data from Supabase
+        async function loadUserData() {
+            console.log('📊 Loading user data...');
+            
+            if (!currentUser) {
+                // Load from localStorage if not logged in
+                cart = JSON.parse(localStorage.getItem('cart')) || [];
+                wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+                console.log('📱 Loaded from localStorage - Cart:', cart.length, 'Wishlist:', wishlist.length);
+                return;
+            }
+
+            // Load from Supabase if tables are available, otherwise use localStorage
+            if (databaseStatus.cart) {
+                try {
+                    const { data: cartData, error: cartError } = await supabase
+                        .from('cart')
+                        .select('*')
+                        .eq('user_id', currentUser.id);
+
+                    if (!cartError && cartData) {
+                        cart = cartData;
+                        console.log('🛒 Cart loaded from database:', cart.length, 'items');
+                    } else {
+                        console.log('⚠️ Error loading cart from database:', cartError?.message);
+                        cart = JSON.parse(localStorage.getItem(`cart_${currentUser.id}`)) || [];
+                    }
+                } catch (error) {
+                    console.log('⚠️ Database cart loading failed, using localStorage');
+                    cart = JSON.parse(localStorage.getItem(`cart_${currentUser.id}`)) || [];
+                }
+            } else {
+                cart = JSON.parse(localStorage.getItem(`cart_${currentUser.id}`)) || [];
+                console.log('💾 Cart loaded from localStorage (no database table):', cart.length, 'items');
+            }
+
+            if (databaseStatus.wishlist) {
+                try {
+                    const { data: wishlistData, error: wishlistError } = await supabase
+                        .from('wishlist')
+                        .select('*')
+                        .eq('user_id', currentUser.id);
+
+                    if (!wishlistError && wishlistData) {
+                        wishlist = wishlistData.map(item => item.product_id);
+                        console.log('❤️ Wishlist loaded from database:', wishlist.length, 'items');
+                    } else {
+                        console.log('⚠️ Error loading wishlist from database:', wishlistError?.message);
+                        wishlist = JSON.parse(localStorage.getItem(`wishlist_${currentUser.id}`)) || [];
+                    }
+                } catch (error) {
+                    console.log('⚠️ Database wishlist loading failed, using localStorage');
+                    wishlist = JSON.parse(localStorage.getItem(`wishlist_${currentUser.id}`)) || [];
+                }
+            } else {
+                wishlist = JSON.parse(localStorage.getItem(`wishlist_${currentUser.id}`)) || [];
+                console.log('💾 Wishlist loaded from localStorage (no database table):', wishlist.length, 'items');
+            }
+            
+            console.log('✅ User data loaded - Cart:', cart.length, 'Wishlist:', wishlist.length);
+        }
 
         // Authentication Functions
         async function checkAuthStatus() {
@@ -307,8 +831,11 @@
         async function logout() {
             await supabase.auth.signOut();
             currentUser = null;
+            cart = [];
+            wishlist = [];
             updateAuthUI();
-            showPopup('Logged out successfully!', 'success');
+            updateCartUI();
+            showPopup('सफलतापूर्वक लॉगआउट हो गए!', 'success');
             toggleMenu();
         }
 
@@ -343,33 +870,58 @@
             const popupMessage = document.getElementById('popupMessage');
             const popupIcon = document.getElementById('popupIcon');
             
+            // Remove existing popup if any
+            popup.classList.add('hidden');
+            
+            // Set message with better Hindi support
             popupMessage.textContent = message;
             
+            // Update popup styling based on type
+            const popupContainer = popup.querySelector('.popup');
+            popupContainer.className = 'popup rounded-lg p-4 shadow-lg max-w-sm border-l-4 transition-all duration-300';
+            
             if (type === 'success') {
-                popupIcon.innerHTML = '<div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div>';
+                popupContainer.classList.add('bg-green-50', 'border-green-500');
+                popupIcon.innerHTML = '<div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center animate-pulse"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div>';
+                popupMessage.classList.add('text-green-800', 'font-medium');
             } else if (type === 'error') {
-                popupIcon.innerHTML = '<div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div>';
+                popupContainer.classList.add('bg-red-50', 'border-red-500');
+                popupIcon.innerHTML = '<div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center animate-pulse"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div>';
+                popupMessage.classList.add('text-red-800', 'font-medium');
+            } else if (type === 'warning') {
+                popupContainer.classList.add('bg-yellow-50', 'border-yellow-500');
+                popupIcon.innerHTML = '<div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center animate-pulse"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg></div>';
+                popupMessage.classList.add('text-yellow-800', 'font-medium');
             } else {
-                popupIcon.innerHTML = '<div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg></div>';
+                popupContainer.classList.add('bg-[#99d0bd]/10', 'border-[#99d0bd]');
+                popupIcon.innerHTML = '<div class="w-8 h-8 bg-[#99d0bd] rounded-full flex items-center justify-center animate-pulse"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg></div>';
+                popupMessage.classList.add('text-[#7fb3a3]', 'font-medium');
             }
             
+            // Show popup with animation
             popup.classList.remove('hidden');
-            setTimeout(() => popup.classList.add('hidden'), 3000);
+            
+            // Auto hide after 4 seconds
+            setTimeout(() => {
+                popup.classList.add('hidden');
+                // Reset classes
+                popupMessage.className = '';
+            }, 4000);
         }
 
         // Product Functions
         function loadProducts() {
             const grid = document.getElementById('productsGrid');
             grid.innerHTML = products.map(product => `
-                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="showProductModal(${product.id})">
-                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='https://via.placeholder.com/300x300/99d0bd/ffffff?text=Perfume';">
-                    <div class="p-4">
-                        <h3 class="font-semibold oswald text-lg mb-2">${product.name}</h3>
-                        <p class="text-gray-600 text-sm mb-3">${product.description.substring(0, 60)}...</p>
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg" onclick="showProductModal(${product.id})">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-32 sm:h-40 md:h-48 lg:h-52 object-cover" onerror="this.src='https://via.placeholder.com/300x300/99d0bd/ffffff?text=Perfume';">
+                    <div class="p-2 sm:p-3 md:p-4">
+                        <h3 class="font-semibold oswald text-sm sm:text-base md:text-lg mb-1 sm:mb-2 line-clamp-1">${product.name}</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-3 line-clamp-2">${product.description.substring(0, window.innerWidth < 480 ? 40 : 60)}...</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold text-[#99d0bd]">₹${product.price}</span>
-                            <button onclick="event.stopPropagation(); toggleWishlist(${product.id})" class="p-2 rounded-full hover:bg-gray-100">
-                                <svg class="w-5 h-5 ${wishlist.includes(product.id) ? 'text-red-500 fill-current' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <span class="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-[#99d0bd]">₹${product.price}</span>
+                            <button onclick="event.stopPropagation(); toggleWishlist(${product.id})" class="p-1 sm:p-1.5 md:p-2 rounded-full hover:bg-gray-100 transition-colors">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 ${wishlist.includes(product.id) ? 'text-red-500 fill-current' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                                 </svg>
                             </button>
@@ -385,19 +937,19 @@
             const content = document.getElementById('productModalContent');
             
             content.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/400x300/99d0bd/ffffff?text=Perfume';">
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold oswald mb-4">${product.name}</h2>
-                    <p class="text-gray-600 mb-4">${product.description}</p>
-                    <div class="flex justify-between items-center mb-6">
-                        <span class="text-3xl font-bold text-[#99d0bd]">₹${product.price}</span>
-                        <button onclick="toggleWishlist(${product.id})" class="p-3 rounded-full hover:bg-gray-100">
-                            <svg class="w-6 h-6 ${wishlist.includes(product.id) ? 'text-red-500 fill-current' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <img src="${product.image}" alt="${product.name}" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover" onerror="this.src='https://via.placeholder.com/400x300/99d0bd/ffffff?text=Perfume';">
+                <div class="p-4 sm:p-5 md:p-6">
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold oswald mb-3 sm:mb-4">${product.name}</h2>
+                    <p class="text-gray-600 text-sm sm:text-base mb-4 sm:mb-5">${product.description}</p>
+                    <div class="flex justify-between items-center mb-4 sm:mb-6">
+                        <span class="text-xl sm:text-2xl md:text-3xl font-bold text-[#99d0bd]">₹${product.price}</span>
+                        <button id="modalWishlistBtn-${product.id}" onclick="toggleWishlistFromModal(${product.id})" class="p-2 sm:p-3 rounded-full hover:bg-gray-100 transition-colors">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 ${wishlist.includes(product.id) ? 'text-red-500 fill-current' : 'text-gray-400'}" fill="${wishlist.includes(product.id) ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
                         </button>
                     </div>
-                    <button onclick="addToCart(${product.id})" class="w-full bg-[#99d0bd] hover:bg-[#7fb3a3] text-white py-3 rounded-lg font-semibold oswald text-lg">
+                    <button onclick="addToCart(${product.id})" class="w-full bg-[#99d0bd] hover:bg-[#7fb3a3] text-white py-2.5 sm:py-3 rounded-lg font-semibold oswald text-sm sm:text-base md:text-lg transition-colors">
                         Add to Cart
                     </button>
                 </div>
@@ -406,43 +958,158 @@
             modal.classList.remove('hidden');
         }
 
+        // Separate function for modal wishlist toggle to update UI immediately
+        async function toggleWishlistFromModal(productId) {
+            await toggleWishlist(productId);
+            
+            // Update modal heart icon immediately
+            const modalBtn = document.getElementById(`modalWishlistBtn-${productId}`);
+            if (modalBtn) {
+                const svg = modalBtn.querySelector('svg');
+                const isInWishlist = wishlist.includes(productId);
+                
+                if (isInWishlist) {
+                    svg.classList.remove('text-gray-400');
+                    svg.classList.add('text-red-500', 'fill-current');
+                    svg.setAttribute('fill', 'currentColor');
+                } else {
+                    svg.classList.remove('text-red-500', 'fill-current');
+                    svg.classList.add('text-gray-400');
+                    svg.setAttribute('fill', 'none');
+                }
+            }
+        }
+
         function closeProductModal() {
             document.getElementById('productModal').classList.add('hidden');
         }
 
         // Cart Functions
-        function addToCart(productId) {
-            const existingItem = cart.find(item => item.id === productId);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ id: productId, quantity: 1 });
+        async function addToCart(productId) {
+            console.log('🛒 Adding product to cart:', productId);
+            
+            if (!currentUser) {
+                showPopup('कृपया पहले लॉगिन करें!', 'warning');
+                showSignup();
+                return;
             }
             
-            localStorage.setItem('cart', JSON.stringify(cart));
+            const existingItem = cart.find(item => item.product_id === productId || item.id === productId);
+            
+            if (databaseStatus.cart) {
+                try {
+                    if (existingItem) {
+                        // Update quantity in database
+                        const { error } = await supabase
+                            .from('cart')
+                            .update({ quantity: existingItem.quantity + 1 })
+                            .eq('user_id', currentUser.id)
+                            .eq('product_id', productId);
+
+                        if (!error) {
+                            existingItem.quantity += 1;
+                            console.log('✅ Cart updated in database');
+                        } else {
+                            throw error;
+                        }
+                    } else {
+                        // Insert new item in database
+                        const { data, error } = await supabase
+                            .from('cart')
+                            .insert([{ 
+                                user_id: currentUser.id, 
+                                product_id: productId, 
+                                quantity: 1 
+                            }])
+                            .select();
+
+                        if (!error && data) {
+                            cart.push(data[0]);
+                            console.log('✅ New item added to database cart');
+                        } else {
+                            throw error;
+                        }
+                    }
+                } catch (error) {
+                    console.log('⚠️ Database cart update failed:', error.message);
+                    showPopup('कार्ट अपडेट करने में समस्या हुई!', 'error');
+                    return;
+                }
+            } else {
+                // Fallback to localStorage
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({ id: productId, product_id: productId, quantity: 1 });
+                }
+                localStorage.setItem(`cart_${currentUser.id}`, JSON.stringify(cart));
+                console.log('💾 Cart saved to localStorage (no database table)');
+            }
+            
             updateCartUI();
-            showPopup('Product added to cart!', 'success');
+            showPopup('प्रोडक्ट कार्ट में जोड़ दिया गया!', 'success');
             closeProductModal();
         }
 
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            localStorage.setItem('cart', JSON.stringify(cart));
+        async function removeFromCart(productId) {
+            if (currentUser) {
+                try {
+                    const { error } = await supabase
+                        .from('cart')
+                        .delete()
+                        .eq('user_id', currentUser.id)
+                        .eq('product_id', productId);
+
+                    if (!error) {
+                        cart = cart.filter(item => (item.product_id || item.id) !== productId);
+                    }
+                } catch (error) {
+                    console.error('Error removing from cart:', error);
+                    cart = cart.filter(item => (item.product_id || item.id) !== productId);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+            } else {
+                cart = cart.filter(item => (item.product_id || item.id) !== productId);
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+            
             updateCartUI();
             displayCartItems();
         }
 
-        function updateQuantity(productId, change) {
-            const item = cart.find(item => item.id === productId);
+        async function updateQuantity(productId, change) {
+            const item = cart.find(item => (item.product_id || item.id) === productId);
             if (item) {
-                item.quantity += change;
-                if (item.quantity <= 0) {
+                const newQuantity = item.quantity + change;
+                
+                if (newQuantity <= 0) {
                     removeFromCart(productId);
-                } else {
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    updateCartUI();
-                    displayCartItems();
+                    return;
                 }
+
+                if (currentUser) {
+                    try {
+                        const { error } = await supabase
+                            .from('cart')
+                            .update({ quantity: newQuantity })
+                            .eq('user_id', currentUser.id)
+                            .eq('product_id', productId);
+
+                        if (!error) {
+                            item.quantity = newQuantity;
+                        }
+                    } catch (error) {
+                        console.error('Error updating quantity:', error);
+                        item.quantity = newQuantity;
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                    }
+                } else {
+                    item.quantity = newQuantity;
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+                
+                updateCartUI();
+                displayCartItems();
             }
         }
 
@@ -464,7 +1131,14 @@
             
             let total = 0;
             cartItems.innerHTML = cart.map(item => {
-                const product = products.find(p => p.id === item.id);
+                const productId = item.product_id || item.id;
+                const product = products.find(p => p.id === productId);
+                
+                if (!product) {
+                    console.error('Product not found for ID:', productId);
+                    return '';
+                }
+                
                 const itemTotal = product.price * item.quantity;
                 total += itemTotal;
                 
@@ -478,10 +1152,10 @@
                             </div>
                         </div>
                         <div class="flex items-center">
-                            <button onclick="updateQuantity(${item.id}, -1)" class="bg-gray-200 px-2 py-1 rounded">-</button>
+                            <button onclick="updateQuantity(${productId}, -1)" class="bg-gray-200 px-2 py-1 rounded">-</button>
                             <span class="mx-3">${item.quantity}</span>
-                            <button onclick="updateQuantity(${item.id}, 1)" class="bg-gray-200 px-2 py-1 rounded">+</button>
-                            <button onclick="removeFromCart(${item.id})" class="ml-3 text-red-500">
+                            <button onclick="updateQuantity(${productId}, 1)" class="bg-gray-200 px-2 py-1 rounded">+</button>
+                            <button onclick="removeFromCart(${productId})" class="ml-3 text-red-500">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" clip-rule="evenodd"></path>
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
@@ -496,17 +1170,69 @@
         }
 
         // Wishlist Functions
-        function toggleWishlist(productId) {
-            const index = wishlist.indexOf(productId);
-            if (index > -1) {
-                wishlist.splice(index, 1);
-                showPopup('Removed from wishlist', 'info');
-            } else {
-                wishlist.push(productId);
-                showPopup('Added to wishlist!', 'success');
+        async function toggleWishlist(productId) {
+            console.log('❤️ Toggling wishlist for product:', productId);
+            
+            if (!currentUser) {
+                showPopup('कृपया पहले लॉगिन करें!', 'warning');
+                showSignup();
+                return;
             }
             
-            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            const index = wishlist.indexOf(productId);
+            
+            if (databaseStatus.wishlist) {
+                try {
+                    if (index > -1) {
+                        // Remove from database
+                        const { error } = await supabase
+                            .from('wishlist')
+                            .delete()
+                            .eq('user_id', currentUser.id)
+                            .eq('product_id', productId);
+
+                        if (!error) {
+                            wishlist.splice(index, 1);
+                            showPopup('विशलिस्ट से हटा दिया गया', 'info');
+                            console.log('✅ Removed from database wishlist');
+                        } else {
+                            throw error;
+                        }
+                    } else {
+                        // Add to database
+                        const { error } = await supabase
+                            .from('wishlist')
+                            .insert([{ 
+                                user_id: currentUser.id, 
+                                product_id: productId 
+                            }]);
+
+                        if (!error) {
+                            wishlist.push(productId);
+                            showPopup('विशलिस्ट में जोड़ दिया गया!', 'success');
+                            console.log('✅ Added to database wishlist');
+                        } else {
+                            throw error;
+                        }
+                    }
+                } catch (error) {
+                    console.log('⚠️ Database wishlist update failed:', error.message);
+                    showPopup('विशलिस्ट अपडेट करने में समस्या हुई!', 'error');
+                    return;
+                }
+            } else {
+                // Fallback to localStorage
+                if (index > -1) {
+                    wishlist.splice(index, 1);
+                    showPopup('विशलिस्ट से हटा दिया गया', 'info');
+                } else {
+                    wishlist.push(productId);
+                    showPopup('विशलिस्ट में जोड़ दिया गया!', 'success');
+                }
+                localStorage.setItem(`wishlist_${currentUser.id}`, JSON.stringify(wishlist));
+                console.log('💾 Wishlist saved to localStorage (no database table)');
+            }
+            
             loadProducts(); // Refresh to update heart icons
         }
 
@@ -554,7 +1280,13 @@
         // Checkout Functions
         function proceedToCheckout() {
             if (cart.length === 0) {
-                showPopup('Your cart is empty!', 'error');
+                showPopup('आपका कार्ट खाली है!', 'warning');
+                return;
+            }
+            
+            if (!currentUser) {
+                showPopup('कृपया पहले लॉगिन करें!', 'warning');
+                showSignup();
                 return;
             }
             
@@ -703,12 +1435,13 @@
         async function completeOrder(orderData) {
             const orderId = 'ORD' + Date.now();
             const total = cart.reduce((sum, item) => {
-                const product = products.find(p => p.id === item.id);
+                const productId = item.product_id || item.id;
+                const product = products.find(p => p.id === productId);
                 return sum + (product.price * item.quantity);
             }, 0);
             
             const order = {
-                id: orderId,
+                order_id: orderId,
                 user_id: currentUser.id,
                 items: cart,
                 total: total,
@@ -717,11 +1450,28 @@
                 created_at: new Date().toISOString()
             };
             
-            // Save order to Supabase
-            try {
-                await supabase.from('orders').insert([order]);
-            } catch (error) {
-                console.error('Error saving order:', error);
+            // Save order to Supabase if table is available
+            if (databaseStatus.orders) {
+                try {
+                    const { data, error } = await supabase
+                        .from('orders')
+                        .insert([order])
+                        .select();
+                    
+                    if (error) {
+                        console.log('⚠️ Error saving order to database:', error.message);
+                        showPopup('ऑर्डर सेव करने में समस्या हुई!', 'error');
+                        return;
+                    } else {
+                        console.log('✅ Order saved to database successfully');
+                    }
+                } catch (error) {
+                    console.log('⚠️ Error saving order:', error.message);
+                    showPopup('ऑर्डर सेव करने में समस्या हुई!', 'error');
+                    return;
+                }
+            } else {
+                console.log('💾 Orders table not available, using localStorage only');
             }
             
             // Save order locally as backup
@@ -729,9 +1479,28 @@
             orders.push(order);
             localStorage.setItem(`orders_${currentUser.id}`, JSON.stringify(orders));
             
-            // Clear cart
+            // Clear cart from database and local storage
+            if (currentUser && databaseStatus.cart) {
+                try {
+                    const { error } = await supabase
+                        .from('cart')
+                        .delete()
+                        .eq('user_id', currentUser.id);
+                    
+                    if (!error) {
+                        console.log('✅ Cart cleared from database');
+                    } else {
+                        console.log('⚠️ Error clearing cart from database:', error.message);
+                    }
+                } catch (error) {
+                    console.log('⚠️ Error clearing cart from database:', error.message);
+                }
+            }
+            
             cart = [];
-            localStorage.setItem('cart', JSON.stringify(cart));
+            if (currentUser) {
+                localStorage.setItem(`cart_${currentUser.id}`, JSON.stringify(cart));
+            }
             updateCartUI();
             
             // Show congratulations
@@ -742,19 +1511,25 @@
             const orderDetails = document.getElementById('orderDetails');
             orderDetails.innerHTML = `
                 <div class="text-sm">
-                    <p><strong>Order ID:</strong> ${order.id}</p>
-                    <p><strong>Total:</strong> ₹${order.total}</p>
-                    <p><strong>Items:</strong> ${order.items.length} products</p>
-                    <p><strong>Status:</strong> Confirmed</p>
+                    <p><strong>ऑर्डर ID:</strong> ${order.order_id}</p>
+                    <p><strong>कुल राशि:</strong> ₹${order.total}</p>
+                    <p><strong>प्रोडक्ट्स:</strong> ${order.items.length} आइटम</p>
+                    <p><strong>स्टेटस:</strong> कन्फर्म</p>
                 </div>
             `;
             
-            document.getElementById('congratsModal').classList.remove('hidden');
+            // Update modal text to Hindi
+            const congratsModal = document.getElementById('congratsModal');
+            congratsModal.querySelector('h2').textContent = 'बधाई हो!';
+            congratsModal.querySelector('p').textContent = 'आपका ऑर्डर सफलतापूर्वक प्लेस हो गया है!';
+            congratsModal.querySelector('button').textContent = 'शॉपिंग जारी रखें';
+            
+            congratsModal.classList.remove('hidden');
             
             setTimeout(() => {
-                document.getElementById('congratsModal').classList.add('hidden');
+                congratsModal.classList.add('hidden');
                 goHome();
-            }, 3000);
+            }, 4000);
         }
 
         function closeCongrats() {
@@ -765,18 +1540,18 @@
         // Navigation Functions
         function goHome() {
             document.getElementById('mainContent').innerHTML = `
-                <section class="relative">
-                    <img src="banner.jpg" alt="Banner" class="w-full h-64 md:h-96 object-cover" onerror="this.src=''; this.style.background='linear-gradient(135deg, #99d0bd, #7fb3a3)'; this.style.height='24rem';">
-                    <div class="absolute inset-0 flex items-end justify-center pb-8">
-                        <button onclick="scrollToProducts()" class="shop-now-btn bg-[#99d0bd] hover:bg-[#7fb3a3] text-white px-8 py-3 rounded-full font-semibold oswald text-lg transition-all duration-300 hover:scale-105">
+                <section class="relative banner-section">
+                    <img src="banner.jpg" alt="Banner" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[28rem] object-cover" onerror="this.src=''; this.style.background='linear-gradient(135deg, #99d0bd, #7fb3a3)'; this.style.height='12rem'; this.classList.add('sm:h-64', 'md:h-80', 'lg:h-96', 'xl:h-[28rem]');">
+                    <div class="absolute inset-0 flex items-end justify-center pb-4 sm:pb-6 md:pb-8">
+                        <button onclick="scrollToProducts()" class="shop-now-btn bg-[#99d0bd] hover:bg-[#7fb3a3] text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 rounded-full font-semibold oswald text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105">
                             Shop Now
                         </button>
                     </div>
                 </section>
 
-                <section id="productsSection" class="container mx-auto px-4 py-8">
-                    <h2 class="text-3xl font-bold text-center mb-8 oswald">Our Perfumes</h2>
-                    <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <section id="productsSection" class="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6 md:mb-8 oswald">Our Perfumes</h2>
+                    <div id="productsGrid" class="products-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
                     </div>
                 </section>
             `;
@@ -866,13 +1641,41 @@
         }
 
         // Orders Functions
-        function showMyOrders() {
+        async function showMyOrders() {
             if (!currentUser) {
                 showSignup();
                 return;
             }
             
-            const orders = JSON.parse(localStorage.getItem(`orders_${currentUser.id}`)) || [];
+            let orders = [];
+            
+            if (databaseStatus.orders) {
+                try {
+                    // Try to load orders from Supabase
+                    const { data: dbOrders, error } = await supabase
+                        .from('orders')
+                        .select('*')
+                        .eq('user_id', currentUser.id)
+                        .order('created_at', { ascending: false });
+
+                    if (!error && dbOrders) {
+                        orders = dbOrders;
+                        console.log('✅ Orders loaded from database:', orders.length);
+                    } else {
+                        console.log('⚠️ No orders found in database or error:', error?.message);
+                    }
+                } catch (error) {
+                    console.log('⚠️ Error loading orders from database:', error.message);
+                }
+            } else {
+                console.log('💾 Orders table not available, using localStorage only');
+            }
+            
+            // Fallback to localStorage if no database orders
+            if (orders.length === 0) {
+                orders = JSON.parse(localStorage.getItem(`orders_${currentUser.id}`)) || [];
+                console.log('Orders loaded from localStorage:', orders.length);
+            }
             
             document.getElementById('mainContent').innerHTML = `
                 <div class="container mx-auto px-4 py-8">
@@ -887,11 +1690,13 @@
                     
                     ${orders.length === 0 ? 
                         '<p class="text-center text-gray-500 py-8">No orders found</p>' :
-                        orders.map(order => `
+                        orders.map(order => {
+                            const orderId = order.order_id || order.id;
+                            return `
                             <div class="bg-white rounded-lg p-6 shadow-md mb-6">
                                 <div class="flex justify-between items-start mb-4">
                                     <div>
-                                        <h3 class="font-semibold oswald text-lg">Order #${order.id}</h3>
+                                        <h3 class="font-semibold oswald text-lg">Order #${orderId}</h3>
                                         <p class="text-gray-600 text-sm">${new Date(order.created_at).toLocaleDateString()}</p>
                                     </div>
                                     <div class="text-right">
@@ -918,18 +1723,19 @@
                                 <div class="border-t pt-4">
                                     <h4 class="font-semibold mb-2">Items:</h4>
                                     ${order.items.map(item => {
-                                        const product = products.find(p => p.id === item.id);
-                                        return `<p class="text-sm text-gray-600">${product.name} x ${item.quantity}</p>`;
+                                        const productId = item.product_id || item.id;
+                                        const product = products.find(p => p.id === productId);
+                                        return product ? `<p class="text-sm text-gray-600">${product.name} x ${item.quantity}</p>` : '';
                                     }).join('')}
                                 </div>
                                 
                                 ${order.status !== 'shipped' && order.status !== 'delivered' ? `
-                                    <button onclick="cancelOrder('${order.id}')" class="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm">
+                                    <button onclick="cancelOrder('${orderId}')" class="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm">
                                         Cancel Order
                                     </button>
                                 ` : ''}
                             </div>
-                        `).join('')
+                        `;}).join('')
                     }
                 </div>
             `;
@@ -1099,6 +1905,11 @@
             const email = formData.get('email');
             const password = formData.get('password');
             
+            if (password.length < 6) {
+                showPopup('पासवर्ड कम से कम 6 अक्षर का होना चाहिए!', 'error');
+                return;
+            }
+            
             try {
                 const { data, error } = await supabase.auth.signUp({
                     email: email,
@@ -1106,15 +1917,22 @@
                 });
                 
                 if (error) {
-                    showPopup(error.message, 'error');
+                    if (error.message.includes('already registered')) {
+                        showPopup('यह ईमेल पहले से रजिस्टर्ड है! कृपया लॉगिन करें।', 'warning');
+                    } else if (error.message.includes('Invalid email')) {
+                        showPopup('कृपया सही ईमेल एड्रेस डालें!', 'error');
+                    } else {
+                        showPopup('अकाउंट बनाने में समस्या हुई!', 'error');
+                    }
                 } else {
-                    showPopup('Account created successfully!', 'success');
+                    showPopup('अकाउंट सफलतापूर्वक बन गया!', 'success');
                     currentUser = data.user;
                     updateAuthUI();
+                    await loadUserData();
                     goHome();
                 }
             } catch (error) {
-                showPopup('Error creating account', 'error');
+                showPopup('अकाउंट बनाने में समस्या हुई!', 'error');
             }
         }
 
@@ -1131,17 +1949,25 @@
                 });
                 
                 if (error) {
-                    showPopup('Invalid email or password', 'error');
+                    if (error.message.includes('Invalid login credentials')) {
+                        showPopup('गलत ईमेल या पासवर्ड!', 'error');
+                    } else if (error.message.includes('Email not confirmed')) {
+                        showPopup('कृपया अपना ईमेल वेरिफाई करें!', 'warning');
+                    } else {
+                        showPopup('लॉगिन करने में समस्या हुई!', 'error');
+                    }
                 } else {
-                    showPopup('Logged in successfully!', 'success');
+                    showPopup('सफलतापूर्वक लॉगिन हो गए!', 'success');
                     currentUser = data.user;
                     updateAuthUI();
+                    await loadUserData();
                     goHome();
                 }
             } catch (error) {
-                showPopup('Error logging in', 'error');
+                showPopup('लॉगिन करने में समस्या हुई!', 'error');
             }
         }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a2d08d10b690d6',t:'MTc1OTcyOTEyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5e106a71a8ae2',t:'MTc1OTc2MTI2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
